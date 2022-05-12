@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block add_post %}
+<h1>Delete Post</h1>
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">Delete</button>
+    <a class="btn btn-success" href="{% url 'home' %}">Cancel</a>
+</form>
+{% endblock add_post %}

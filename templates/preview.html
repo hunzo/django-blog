@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block preview %}
+
+<h1>Preview</h1>
+<div class="card mt-4 mb-4 p-4">
+    {{ post.content | safe }}
+</div>
+
+<a class="btn btn-secondary" href="{% url 'home' %}">back</a>
+{% endblock preview %}

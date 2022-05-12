@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block home %}
+
+<h1>Blog</h1>
+
+<a class="btn btn-primary mt-4" href="{% url 'addPost' %}">Add Post</a>
+<a class="btn btn-secondary mt-4" href="{% url 'publish' %}">home</a>
+
+<div class="card mt-4 p-4">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">title</th>
+                <th scope="col">author</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in object_list %}
+            <tr>
+                <th scope="row">{{ post.pk }}</th>
+                <td>{{post.title}}</td>
+                <td>{{post.author}}</td>
+                <td style="text-align: end;">
+                    <a class="btn btn-danger" href="{% url 'deletePost' post.pk %}">Delete</a>
+                    <a class="btn btn-secondary" href="{% url 'updatePost' post.pk %}">Edit</a>
+                    <a class="btn btn-success" href="{% url 'preview' post.pk %}">Preview</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+
+</div>
+
+{% endblock home%}
