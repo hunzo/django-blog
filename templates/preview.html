@@ -2,7 +2,7 @@
 
 {% block preview %}
 
-<h1>Preview</h1>
+<h1>Preview, Created by : {{ post.created_by }}</h1>
 <div class="card mt-4 mb-4 p-4">
     {{ post.content | safe }}
 </div>
