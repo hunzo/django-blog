@@ -2,6 +2,7 @@
 
 {% block add_post %}
 <h1>Update Post</h1>
+<div class="card p-4" style="width: 55rem;">
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -9,4 +10,5 @@
     <button class="btn btn-danger">Update</button>
     <a class="btn btn-primary" href="{% url 'home' %}">Cancel</a>
 </form>
+</div>
 {% endblock add_post %}

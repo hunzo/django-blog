@@ -8,8 +8,10 @@
 <div class="card mt-4">
     <div class="card-header">
         <h1>
-            {{ post.title }}
+            <strong>Topic: </strong>{{ post.title }}
         </h1>
+        <strong>Create by: </strong>: {{post.created_by}}
+        <strong>Last Login: </strong> {{user.last_login}}
     </div>
     <div class="card-body">
         {{ post.content | safe }}

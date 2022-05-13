@@ -8,7 +8,7 @@ from . import forms
 class Publish(ListView):
     model = models.Post
     template_name = 'publish.html'
-    ordering = ['id']
+    ordering = ['-id']
 
 
 class Home(ListView):

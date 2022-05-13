@@ -2,11 +2,14 @@
 
 {% block add_post %}
 <h1>ADD Post</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    {{ form.media }}
-    <button class="btn btn-primary">Add Post</button>
-    <a class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
-</form>
+<div class="card p-4" style="width: 55rem;">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.media }}
+        <button class="btn btn-primary">Add Post</button>
+        <a class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
+    </form>
+</div>
+
 {% endblock add_post %}
